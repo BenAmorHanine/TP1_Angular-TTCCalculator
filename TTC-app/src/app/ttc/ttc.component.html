@@ -1,1 +1,22 @@
-<p>ttc works!</p>
+<div class="container mt-5">
+  <h2 class="mb-4">Calculateur TTC</h2>
+
+  <div class="mb-3">
+    <label class="form-label">Prix unitaire</label>
+    <input type="number" class="form-control" [(ngModel)]="price">
+  </div>
+
+  <div class="mb-3">
+    <label class="form-label">Quantité</label>
+    <input type="number" class="form-control" [(ngModel)]="quantity">
+  </div>
+
+  <div class="mb-3">
+    <label class="form-label">TVA (%)</label>
+    <input type="number" class="form-control" [(ngModel)]="tva">
+  </div>
+
+  <div class="mt-4 p-3 border rounded bg-light">
+    <h4>Total TTC: <span class="text-success">{{ calculateTTC() | number:'1.2-2' }}</span></h4>
+  </div>
+</div>

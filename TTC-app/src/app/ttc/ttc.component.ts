@@ -1,7 +1,12 @@
 import { Component } from '@angular/core';
+import { FormsModule } from '@angular/forms';
+import { DecimalPipe } from '@angular/common';
+
 
 @Component({
   selector: 'app-ttc',
+  standalone: true,
+  imports: [FormsModule, DecimalPipe],
   templateUrl: './ttc.component.html',
   styleUrls: ['./ttc.component.css']
 })
